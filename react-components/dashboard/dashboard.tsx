@@ -2,6 +2,11 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 export class Dashboard extends React.Component {
+
+    static initialize(elemId) {
+        ReactDOM.render(<Dashboard/>, document.getElementById(elemId));
+    }
+
     constructor(props) {
         super(props);
     }
@@ -14,3 +19,4 @@ export class Dashboard extends React.Component {
     console.log('Component mounted');
   }
 }
+
